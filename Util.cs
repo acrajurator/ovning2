@@ -8,7 +8,7 @@ namespace Program
 {
     public static class Util
     {
-       public static string AskForInput(string prompt, ConsoleUI ui)
+        public static string AskForInput(string prompt, ConsoleUI ui)
         {
             bool success = false;
             string answer;
@@ -22,12 +22,14 @@ namespace Program
                 {
                     ui.PrintString($"You must enter a {prompt}");
                 }
+
                 else
                 {
                     success = true;
                 }
 
             } while (!success);
+
 
             return answer;
         }
@@ -36,12 +38,12 @@ namespace Program
         {
             do
             {
-                //Anropa AskForString så vi vet att vi faktiskt får en string tillbaks
-                //Fortsätter tills vi har fått en string som vi kan Parsa till en uint
+
                 string input = AskForInput(prompt, ui);
                 if (uint.TryParse(input, out uint answer)) return answer;
 
             } while (true);
         }
+
     }
 }
