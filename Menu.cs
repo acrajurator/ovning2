@@ -44,7 +44,7 @@ namespace Program
                     Environment.Exit(0);
                     break;
                 default:
-                    //output error
+                    ui.PrintString("Please input a number");
                     break;
 
             }
@@ -55,6 +55,7 @@ namespace Program
 
         private void ShowMainMenu()
         {
+            ui.PrintString("Welcome to the main menu. Navigate the menu by inputing the number of your option");
             ui.PrintString("1: Go to Cinema");
             ui.PrintString("2: Repeat users input 10 times");
             ui.PrintString("3: Pick third word from users input");

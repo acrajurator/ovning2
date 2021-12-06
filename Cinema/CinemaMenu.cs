@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Program.Cinema
 {
@@ -52,7 +48,7 @@ namespace Program.Cinema
                 case "0":
                     return false;
                 default:
-                    //output error
+                    ui.PrintString("Please input a number");
                     break;
 
             }

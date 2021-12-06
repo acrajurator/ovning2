@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Program.Manipulation
+﻿namespace Program.Manipulation
 {
     public class TextManipulation
     {
@@ -21,7 +19,8 @@ namespace Program.Manipulation
             while (true)
             {
                 string input = ui.GetInput();
-                string[] strings = input.Split(new[] { ';', ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                //can add more signs to ignore
+                string[] strings = input.Split(new[] { ';', ' ', '!' }, System.StringSplitOptions.RemoveEmptyEntries);
 
                 if (strings.Length >= 3)
                 {
